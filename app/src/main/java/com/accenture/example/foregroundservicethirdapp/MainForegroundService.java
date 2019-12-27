@@ -36,7 +36,7 @@ public class MainForegroundService extends Service {
 
                 Intent serviceToastIntent = new Intent(this, MainForegroundService.class);
                 serviceToastIntent.setAction(ACTION_SHOW_TOAST);
-                PendingIntent serviceToastPendingIntent = PendingIntent.getBroadcast(this, 0, serviceToastIntent, 0);
+                PendingIntent serviceToastPendingIntent = PendingIntent.getService(this, 0, serviceToastIntent, 0);
 
                 Intent activityToastIntent = new Intent(this, MainActivity.class);
                 activityToastIntent.setAction(MainActivity.ACTION_SHOW_TOAST);
