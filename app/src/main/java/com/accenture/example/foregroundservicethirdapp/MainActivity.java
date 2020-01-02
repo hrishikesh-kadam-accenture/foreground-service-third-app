@@ -85,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
         Log.v(LOG_TAG, "-> stopMainForegroundService");
 
         Intent serviceIntent = new Intent(this, MainForegroundService.class);
-        serviceIntent.setAction(MainForegroundService.ACTION_STOP_SERVICE);
         stopService(serviceIntent);
     }
 }
